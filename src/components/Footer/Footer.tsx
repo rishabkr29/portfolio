@@ -15,7 +15,7 @@ export function Footer() {
       </a>
       <div>
         <p>
-          This Website was made with <img src={reactIcon} alt="React" />
+          Built with React, TypeScript, and Vite <img src={reactIcon} alt="React" />
           {/* <span>❤️</span> */}
         </p>
       </div>

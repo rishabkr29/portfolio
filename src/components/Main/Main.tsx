@@ -1,4 +1,6 @@
-import Particles from "react-tsparticles"
+import Particles, { ParticlesProvider } from "@tsparticles/react"
+import type { Engine, ISourceOptions } from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
 import { Container } from "./styles";
 import { Hero } from "../Hero/Hero";
 import { About } from "../About/About";
@@ -20,6 +22,7 @@ import boostrapIcon from "../../assets/bootstrap-icon.svg";
 
 export function Main() {
   return (
+    <ParticlesProvider init={(engine: Engine) => loadSlim(engine)}>
     <Container>
       <Particles
         id="tsparticles"
@@ -260,12 +263,13 @@ export function Main() {
             "repeat": "no-repeat",
             "size": "cover"
           }
-        }}
+        } as ISourceOptions}
       />
       <Hero></Hero>
       <About></About>
       <Project></Project>
       <Contact></Contact>
     </Container>
+    </ParticlesProvider>
   );
 }

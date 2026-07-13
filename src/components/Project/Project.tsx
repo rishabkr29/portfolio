@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import githubIcon from "../../assets/github.svg"
 // import DownloadApp from '../../assets/download.webp'
 import externalLink from "../../assets/external-link.svg"
-import ScrollAnimation from "react-animate-on-scroll";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 
 
 export function Project() {
@@ -27,7 +27,7 @@ export function Project() {
             <div className="body">
               <h3>Multilingual VQA Vision-Language Model</h3>
               <p>
-                Fine-tuned Qwen2.5-VL for visual question answering across 14 languages with optimized preprocessing.
+                Fine-tuned Qwen2.5-VL for multilingual visual question answering across 14 languages using optimized multimodal preprocessing, Unsloth, LoRA, and PyTorch.
               </p>
             </div>
             <footer>
@@ -35,6 +35,7 @@ export function Project() {
                 <li>Python</li>
                 <li>Qwen2.5-VL</li>
                 <li>Unsloth</li>
+                <li>LoRA</li>
               </ul>
             </footer>
           </div>
@@ -54,9 +55,9 @@ export function Project() {
             </header>
             <div className="body">
               <h3>Serverless Voting Application for Programming Languages</h3>
-              <p> Developed a serverless voting app using React, AWS Lambda, API Gateway, and DynamoDB, enabling users to view programming languages, cast votes, and access details through an interactive UI, leveraging serverless architecture for scalability and cost-efficiency. </p>
+              <p>Built a cloud-native voting platform using React, AWS Lambda, API Gateway, and DynamoDB, with secure REST API integration, event-driven processing, and scalable handling for high daily traffic.</p>
             </div>
-            <footer> <ul className="tech-list"> <li>AWS Lambda</li> <li>API Gateway</li> <li>DynamoDB</li> </ul> </footer>
+            <footer> <ul className="tech-list"> <li>React</li> <li>AWS Lambda</li> <li>API Gateway</li> <li>DynamoDB</li> </ul> </footer>
           </div>
         </ScrollAnimation>
 

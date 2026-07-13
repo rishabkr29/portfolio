@@ -4,7 +4,8 @@ export const Container = styled.section`
   margin-top: 12rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 4rem;
+  align-items: center;
 
   .hard-skills{
     margin-top: 1.6rem;
@@ -46,54 +47,81 @@ export const Container = styled.section`
   
 
   .about-image{
-    text-align: center;
-   img{
-     margin-top: 2rem;
-     width: 75%;
-     filter: grayscale(0);
-     transition: filter 0.5s;
-     &:hover{
-       filter: grayscale(0);
-     }
-   }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+
+    > div{
+      width: min(42rem, 100%);
+      height: auto;
+      border-radius: 0;
+      background: transparent;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center top;
+      border-radius: 0;
+      filter: grayscale(0);
+      transition: filter 0.5s;
+
+      &:hover{
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .about-text{
+    grid-column: 1;
+    grid-row: 1;
   }
 
   @media only screen and (max-width: 480px) {
     .about-image {
       max-width: 100%;
       margin-top: 4rem;
+
+      > div{
+        width: min(26rem, 78vw);
+        height: min(26rem, 78vw);
+        border-radius: 50%;
+      }
+
       img{
-        margin-top: 2rem;
-        width: 100%;
-        filter: grayscale(0);
-        transition: filter 0.5s;
-        &:hover{
-          filter: grayscale(0);
-        }
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     }
   }
 
   @media (max-width: 960px){
     display: block;
     text-align: center;
-    
+
     .hard-skills{
       justify-content: center;
     }
+
     .about-image{
       display: flex;
+      justify-content: center;
       max-width: 100%;
-      img{
-        margin-top: 2rem;
-        width: 100%;
-        filter: grayscale(0);
-        transition: filter 0.5s;
-        &:hover{
-          filter: grayscale(0);
-        }
+      margin-bottom: 5rem;
     }
-    
-    
-  }
 
+    .about-text,
+    .about-image{
+      grid-column: auto;
+      grid-row: auto;
+    }
+  }
 `

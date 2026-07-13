@@ -10,13 +10,13 @@ export function Contact(){
     <Container id="contact">
       <header>
         <h2>Contact</h2>
-        <p>Ready to get started on your project? </p>
-        <p>Contact me now for a Free consultation.</p>
+        <p>Building something with full-stack engineering, AI workflows, or cloud infrastructure?</p>
+        <p>Let's connect and turn the idea into a reliable product.</p>
       </header>
       <div className="contacts">
         <div>
-        <a href="mailto:vinayak@vinayaksingh.com"><img src={emailIcon} alt="Email" /></a> 
-          <a href="mailto:vinayak@vinayaksingh.com">vinayak@vinayaksingh.com</a>
+        <a href="mailto:hello@vinayaksingh.com"><img src={emailIcon} alt="Email" /></a> 
+          <a href="mailto:hello@vinayaksingh.com">hello@vinayaksingh.com</a>
         </div>
         <div>
         <a href="tel:+919630576848"><img src={phoneIcon} alt="Phone No" /></a>

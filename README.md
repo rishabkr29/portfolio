@@ -1,16 +1,57 @@
-# Portfolio of Vinayak Singh
+# Vinayak Singh Portfolio
 
 <img src ="https://github.com/CodeVinayak/CodeVinayak/blob/5920a79f4c5977332a67caf91125241cf0fc46b5/www.vinayaksingh.in.png" />
- 
-This project was created with CRA (Create React App)
 
-This is my portfolio website to introduce myself, here I put my skills, projects, and contact details.
+Personal portfolio website for Vinayak Kumar Singh, Full Stack AI Engineer.
 
-## Technologies used:
-- React
-- Typescript
-- Styled Components
- 
-## To run this project:
-- yarn install
-- yarn run start
+The site highlights my experience, projects, technical skills, resume, and contact details. It is built with React, TypeScript, Vite, and styled-components.
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- styled-components
+- tsParticles
+- Formspree
+- Vercel Analytics
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Resume
+
+The downloadable resume is served from:
+
+```text
+public/Vinayak_FullStackAI_Engineer.pdf
+```
+
+## Notes
+
+- This project uses npm and `package-lock.json`.
+- `Profile.pdf` is local-only and ignored by Git.
+- Generated build output in `dist/` is ignored.
