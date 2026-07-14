@@ -24,6 +24,24 @@ export const Container = styled.section`
     }
   }
 
+  .skill-badge{
+    span{
+      display: inline-block;
+      padding: 0.5rem 1.4rem;
+      border: 0.15rem solid var(--green);
+      border-radius: 2rem;
+      color: var(--green);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+      transition: background 0.25s, color 0.25s;
+      &:hover{
+        background: var(--green);
+        color: #212121;
+      }
+    }
+  }
+
   h2{
     display: inline-block;
     margin-bottom: 2rem;

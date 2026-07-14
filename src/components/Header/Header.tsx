@@ -15,8 +15,8 @@ export function Header() {
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-          <span>{"<Vinayak "}</span>
-          <span>{" Singh/>"}</span>
+          <span>{"<Rishab "}</span>
+          <span>{" Kumar/>"}</span>
         </HashLink>
         <input
           onChange={toggleTheme}
@@ -39,7 +39,7 @@ export function Header() {
           <NavHashLink smooth to="#contact" onClick={closeMenu}>
             Contact
           </NavHashLink>
-          <a href="/Vinayak_FullStackAI_Engineer.pdf" download className="button">
+          <a href="/Rishab_Kumar_Resume.pdf" download className="button">
             Resume
           </a>
         </nav>
