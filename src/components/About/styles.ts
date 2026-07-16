@@ -60,6 +60,7 @@ export const Container = styled.section`
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
+    text-align: justify;
   }
   
   
