@@ -101,6 +101,7 @@ export const Container = styled.section`
   .about-text{
     grid-column: 1;
     grid-row: 1;
+    text-align: justify;
   }
 
   @media only screen and (max-width: 480px) {

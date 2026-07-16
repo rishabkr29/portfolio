@@ -29,11 +29,11 @@ export function About() {
           </p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.3 * 1000}>
-          <p>
+          {/* <p>
             My recent work spans working on path tracking algorithms like Stanley, Pure Pursuit, and LQR,
             velocity profiling for autonomous vehicles, LiDAR-based pallet detection, and EKF-based sensor
             fusion.
-          </p>
+          </p> */}
         </ScrollAnimation>
 
         <ScrollAnimation animateIn="fadeInLeft" delay={400}>
