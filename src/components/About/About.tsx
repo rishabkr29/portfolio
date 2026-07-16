@@ -28,13 +28,13 @@ export function About() {
             real-world problems in control, motion planning, perception, sensor fusion, and navigation.
           </p>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" delay={0.3 * 1000}>
-          {/* <p>
+        {/* <ScrollAnimation animateIn="fadeInLeft" delay={0.3 * 1000}>
+          <p>
             My recent work spans working on path tracking algorithms like Stanley, Pure Pursuit, and LQR,
             velocity profiling for autonomous vehicles, LiDAR-based pallet detection, and EKF-based sensor
             fusion.
-          </p> */}
-        </ScrollAnimation>
+          </p>
+        </ScrollAnimation> */}
 
         <ScrollAnimation animateIn="fadeInLeft" delay={400}>
           <div className="education">
