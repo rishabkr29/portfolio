@@ -21,7 +21,7 @@ export function Hero() {
           <h3>Robotics Engineer</h3>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
-          <p className="small-resume">Path tracking · Sensor fusion · Motion planning · Reinforcement learning in control</p>
+          <p className="small-resume">Path tracking · Sensor fusion · Motion planning · Reinforcement learning</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
           <BrowserRouter>
@@ -44,13 +44,13 @@ export function Hero() {
             >
               <img src={githubIcon} alt="GitHub" />
             </a>
-            {/* <a
-              href="https://api.whatsapp.com/send/?phone=%2B917023036378&text=Hello+Rishab+I+found+your+contact+through+your+portfolio+site.%0A%0A"
+            <a
+              href="https://api.whatsapp.com/send/?phone=%2B919366368976&text=Hello+Rishab+I+found+your+contact+through+your+portfolio+site.%0A%0A"
               target="_blank"
               rel="noreferrer"
             >
               <img src={whatsapp} alt="Whatsapp" />
-            </a> */}
+            </a>
           </div>
         </ScrollAnimation>
       </div>

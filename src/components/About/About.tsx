@@ -25,14 +25,14 @@ export function About() {
         <ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000} style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <p>
             I work across C++, Python, ROS/ROS2, and simulation tools like MuJoCo and Gazebo to solve
-            real-world problems in control, motion planning, perception, sensor fusion, and autonomous navigation.
+            real-world problems in control, motion planning, perception, sensor fusion, and navigation.
           </p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.3 * 1000}>
           <p>
             My recent work spans working on path tracking algorithms like Stanley, Pure Pursuit, and LQR,
             velocity profiling for autonomous vehicles, LiDAR-based pallet detection, and EKF-based sensor
-            fusion for ground robots.
+            fusion.
           </p>
         </ScrollAnimation>
 
