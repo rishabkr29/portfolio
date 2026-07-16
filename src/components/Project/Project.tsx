@@ -23,7 +23,7 @@ export function Project() {
               </div>
             </header>
             <div className="body">
-              <h3>M.Tech Thesis — 2R Cable-Driven Manipulator</h3>
+              <h3>M.Tech Thesis — 2R Cable-Driven Manipulator for upper limb assistance</h3>
               <p>
                 Designed and developed a 2R cable-driven manipulator for upper limb assistance.
                 Implemented high-level position control algorithms for precise end-effector positioning,
@@ -59,8 +59,8 @@ export function Project() {
               <h3>Path Tracking Controllers for Autonomous Vehicles</h3>
               <p>
                 Developed and tuned lateral &amp; longitudinal path tracking algorithms — Stanley, Pure Pursuit,
-                and LQR — for BOPT and mining vehicles at Flux Auto. Also built velocity profiling to optimize
-                acceleration and ensure cargo stability and safe braking distances.
+                and LQR — for BOPT and mining vehicles at Flux Auto. Also built velocity profile to optimize
+                acceleration and ensure vehicle stability and safe braking distances.
               </p>
             </div>
             <footer>
