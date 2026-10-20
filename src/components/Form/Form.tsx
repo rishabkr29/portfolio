@@ -27,7 +27,7 @@ export function Form() {
         toastId: 'succeeded',
       })
     }
-  })
+  }, [state.succeeded])
   if (state.succeeded) {
     return (
       <ContainerSucces>
@@ -45,22 +45,25 @@ export function Form() {
   }
   return (
     <Container>
-      <h2>Get in touch using the form</h2>
+      <h3>Leave a note</h3>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="email">Your email</label>
         <input
-          placeholder="Email"
+          placeholder="you@example.com"
           id="email"
           type="email"
           name="email"
+          autoComplete="email"
           onChange={(e) => {
             verifyEmail(e.target.value)
           }}
           required
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
+        <label htmlFor="message">Your message</label>
         <textarea
           required
-          placeholder="Send a message to get started."
+          placeholder="Tell me a little about your project or idea…"
           id="message"
           name="message"
           onChange={(e) => {
@@ -72,17 +75,16 @@ export function Form() {
           field="message"
           errors={state.errors}
         />
-        <ReCAPTCHA
+        <div className="captcha"><ReCAPTCHA
           sitekey="6Lfj9NYfAAAAAP8wPLtzrsSZeACIcGgwuEIRvbSg"
-          onChange={(e) => {
-            setIsHuman(true)
-          }}
-        ></ReCAPTCHA>
+          onChange={(token) => setIsHuman(Boolean(token))}
+          onExpired={() => setIsHuman(false)}
+        /></div>
         <button
           type="submit"
           disabled={state.submitting || !validEmail || !message || !isHuman}
         >
-          Submit
+          Send message <span aria-hidden="true">↗</span>
         </button>
       </form>
       <ToastContainer />

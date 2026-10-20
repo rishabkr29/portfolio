@@ -1,61 +1,25 @@
 import styled from "styled-components";
 
-
 export const Container = styled.footer`
-  background-color: #2b2b2b;
-  padding: 3rem 15rem;
-  margin-top: 10rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 2.4rem;
+  margin-top: 8rem;
+  padding: 3.2rem max(2.4rem, calc((100% - 118rem) / 2));
+  border-top: 1px solid var(--border);
+  p { color: var(--muted); font-size: 1.2rem; }
+  .logo { font-size: 1.8rem; }
+  .social-media { display: flex; align-items: center; gap: 1.6rem; }
+  .social-media a { padding: 0.4rem; }
+  .social-media img { width: 2.2rem; height: 2.2rem; }
 
-
-  .logo{
-    font-size: 2.8rem;
-  }
-
-  p{
-    letter-spacing: 0.2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    img{
-      width: 2.6rem;
-      animation: spinning 5s infinite linear;
-    }
-  }
-  .social-media{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-
-    img,span{
-      font-size: 3rem;
-      width: 3rem;
-    }
-  }
-
-
-  @keyframes spinning {
-    0%{
-      transform: rotate(0);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
-  }
-
-  @media(max-width: 800px){
-    padding: 4rem 10rem;
+  @media (max-width: 650px) {
     flex-direction: column;
-    gap: 2rem;
-    text-align: center;
+    align-items: flex-start;
+    gap: 1.8rem;
+    margin-top: 6rem;
+    padding-inline: 2rem;
   }
-  @media(max-width: 600px){
-    padding: 4rem 1rem;
-    p{
-      font-size: 1.2rem;
-    }
-  }
-`
+`;

@@ -1,53 +1,48 @@
-import { Container } from "./styles"
-import ScrollAnimation from "../ScrollAnimation/ScrollAnimation"
-import Illustration from "../../assets/illustration.svg"
-import { NavHashLink } from "react-router-hash-link"
-import linkedin from '../../assets/linkedin.svg'
-import githubIcon from '../../assets/github.svg'
+import { Container } from "./styles";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
+import Illustration from "../../assets/illustration.svg";
+import { NavHashLink } from "react-router-hash-link";
+import linkedin from "../../assets/linkedin.svg";
+import githubIcon from "../../assets/github.svg";
 
 export function Hero() {
   return (
-    <Container id="home">
+    <Container id="home" aria-labelledby="home-heading">
       <div className="hero-text">
         <ScrollAnimation animateIn="fadeInUp">
-          <p>Hello, I'm</p>
+          <p className="section-eyebrow">Hello, I’m</p>
+          <h1 id="home-heading">Rishab Kumar</h1>
+          <p className="hero-role">Robotics Engineer</p>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
-          <h1>Rishab Kumar</h1>
+        <ScrollAnimation animateIn="fadeInUp" delay={100}>
+          <p className="hero-description">
+            Building the control and perception systems that help robots
+            move with confidence.
+          </p>
+          <p className="hero-focus">Control · Perception · Reinforcement learning</p>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
-          <h3>Robotics Engineer</h3>
+        <ScrollAnimation animateIn="fadeInUp" delay={200}>
+          <div className="hero-actions">
+            <NavHashLink smooth to="#contact" className="button">Let’s connect <span aria-hidden="true">↗</span></NavHashLink>
+            <NavHashLink smooth to="#project" className="work-link">Explore my work <span aria-hidden="true">↓</span></NavHashLink>
+          </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
-          <p className="small-resume">Path tracking · Sensor fusion · Motion planning · Reinforcement learning</p>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
-          <NavHashLink smooth to="#contact" className="button">Contact</NavHashLink>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000}>
+        <ScrollAnimation animateIn="fadeInUp" delay={300}>
           <div className="social-media">
-            <a
-              href="https://www.linkedin.com/in/rishabkumar29/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={linkedin} alt="LinkedIn" />
+            <a href="https://www.linkedin.com/in/rishabkumar29/" target="_blank" rel="noreferrer" aria-label="Rishab on LinkedIn">
+              <img src={linkedin} alt="" />
             </a>
-            <a
-              href="https://github.com/rishabkr29"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={githubIcon} alt="GitHub" />
+            <a href="https://github.com/rishabkr29" target="_blank" rel="noreferrer" aria-label="Rishab on GitHub">
+              <img src={githubIcon} alt="" />
             </a>
           </div>
         </ScrollAnimation>
       </div>
       <div className="hero-image">
-        <ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
-          <img src={Illustration} alt="Robotics engineering illustration" />
+        <ScrollAnimation animateIn="fadeInUp" delay={200}>
+          <img src={Illustration} alt="" />
         </ScrollAnimation>
       </div>
     </Container>
-  )
+  );
 }

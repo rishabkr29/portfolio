@@ -10,7 +10,6 @@ The site highlights my experience, projects, technical skills, resume, and conta
 - TypeScript
 - Vite
 - styled-components
-- tsParticles
 - Formspree
 - Vercel Analytics (optional)
 
@@ -79,8 +78,8 @@ VITE_BASE_PATH=/portfolio/ npm run preview
 Open `http://127.0.0.1:4173/portfolio/`. Normal local development and root-domain
 deployments use `/` by default.
 
-Before sharing the site, add your profile photo at
-`public/Images/Rishab_Kumar.jpg`. The contact form currently has hardcoded
+The About section uses a narrative layout with experience, education, and
+skills, without requiring a profile photo. The contact form currently has hardcoded
 Formspree and reCAPTCHA settings in `src/components/Form/Form.tsx`; replace
 them with settings from your own accounts and allow your GitHub Pages domain
 in reCAPTCHA. The email and phone links work independently of the form.
