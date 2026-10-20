@@ -13,7 +13,7 @@ function App() {
       <GlobalStyle></GlobalStyle>
       <Header></Header>
       <Main></Main>
-      <Analytics />
+      {import.meta.env.VITE_VERCEL_ANALYTICS === 'true' && <Analytics />}
       <Footer></Footer>
     </>
   )

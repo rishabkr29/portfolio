@@ -2,7 +2,6 @@ import { Container } from './styles'
 import reactIcon from '../../assets/react-icon.svg'
 import linkedin from '../../assets/linkedin.svg'
 import githubIcon from '../../assets/github.svg'
-import whatsapp from '../../assets/whatsapp.svg'
 
 export function Footer() {
   return (
@@ -30,13 +29,6 @@ export function Footer() {
           rel="noreferrer"
         >
           <img src={githubIcon} alt="GitHub" />
-        </a>
-        <a
-          href="https://api.whatsapp.com/send/?phone=%2B917023036378&text=Hello+Rishab+I+found+your+contact+through+your+portfolio+site.%0A%0A"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={whatsapp} alt="Whatsapp" />
         </a>
       </div>
     </Container>

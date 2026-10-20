@@ -8,7 +8,7 @@ export function About() {
       <div className="about-image">
         <ScrollAnimation animateIn="fadeInRight" delay={0.21 * 1000}>
           {/* Replace with your photo in /public/Images/Rishab_Kumar.jpg */}
-          <img src="/Images/Rishab_Kumar.jpg" alt="Rishab Kumar"
+          <img src={`${import.meta.env.BASE_URL}Images/Rishab_Kumar.jpg`} alt="Rishab Kumar"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
         </ScrollAnimation>
       </div>

@@ -1,11 +1,9 @@
-import { BrowserRouter } from "react-router-dom"
 import { Container } from "./styles"
 import ScrollAnimation from "../ScrollAnimation/ScrollAnimation"
 import Illustration from "../../assets/illustration.svg"
 import { NavHashLink } from "react-router-hash-link"
 import linkedin from '../../assets/linkedin.svg'
 import githubIcon from '../../assets/github.svg'
-import whatsapp from '../../assets/whatsapp.svg'
 
 export function Hero() {
   return (
@@ -24,9 +22,7 @@ export function Hero() {
           <p className="small-resume">Path tracking · Sensor fusion · Motion planning · Reinforcement learning</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
-          <BrowserRouter>
-            <NavHashLink smooth to="#contact" className="button">Contact</NavHashLink>
-          </BrowserRouter>
+          <NavHashLink smooth to="#contact" className="button">Contact</NavHashLink>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000}>
           <div className="social-media">
@@ -43,13 +39,6 @@ export function Hero() {
               rel="noreferrer"
             >
               <img src={githubIcon} alt="GitHub" />
-            </a>
-            <a
-              href="https://api.whatsapp.com/send/?phone=%2B919366368976&text=Hello+Rishab+I+found+your+contact+through+your+portfolio+site.%0A%0A"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={whatsapp} alt="Whatsapp" />
             </a>
           </div>
         </ScrollAnimation>
