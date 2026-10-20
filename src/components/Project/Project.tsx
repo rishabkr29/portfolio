@@ -1,6 +1,4 @@
 import { Container } from "./styles";
-import githubIcon from "../../assets/github.svg";
-import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 import cplusplusIcon from "../../assets/skills/cplusplus.svg";
 import pythonIcon from "../../assets/skills/python.svg";
 import rosIcon from "../../assets/skills/ros.svg";
@@ -30,39 +28,45 @@ const skills = [
 
 const projects = [
   {
-    category: "Assistive robotics · M.Tech thesis",
-    title: "Cable-Driven Assistive Manipulator",
-    description: "Designed a 2R cable-driven manipulator for upper limb assistance. Developed position control algorithms, validated them in MuJoCo, and tested the system on hardware at IIT Gandhinagar’s Human-Centered Robotics Lab.",
+    organisation: "IIT Gandhinagar",
+    context: "M.Tech thesis · Assistive robotics",
+    title: "Cable-driven assistive manipulator",
+    description: "Designed a 2R cable-driven manipulator for upper-limb assistance. Developed position control algorithms and validated the system in MuJoCo and on hardware at the Human-Centered Robotics Lab.",
     technologies: ["MuJoCo", "C++", "Control systems", "ROS"],
   },
   {
-    category: "Autonomous vehicles",
-    title: "Autonomous Vehicle Path Tracking",
-    description: "Developed and tuned Stanley, Pure Pursuit, and LQR controllers for BOPT and mining vehicles at Flux Auto. Built velocity profiles to manage acceleration, vehicle stability, and safe braking distances.",
+    organisation: "Flux Auto",
+    context: "Industry project · Vehicle controls",
+    title: "Autonomous vehicle path tracking",
+    description: "Implemented and tuned Stanley, Pure Pursuit, and LQR controllers for BOPT and mining vehicles. Developed velocity profiles to account for acceleration, vehicle stability, and braking constraints.",
     technologies: ["C++", "ROS2", "LQR", "Pure Pursuit", "Stanley"],
   },
   {
-    category: "Perception & localization",
-    title: "LiDAR Pallet Detection & Localization",
-    description: "Built a perception pipeline at Flux Auto using LiDAR point clouds and template matching to detect and localize pallets for autonomous pick-up operations.",
+    organisation: "Flux Auto",
+    context: "Industry project · Perception",
+    title: "LiDAR pallet detection and localization",
+    description: "Developed a LiDAR point-cloud pipeline using template matching to detect and localize pallets for autonomous pickup operations.",
     technologies: ["C++", "ROS2", "LiDAR", "PCL", "Template matching"],
   },
   {
-    category: "Sensor fusion & navigation",
-    title: "EKF Sensor Fusion & Visual Odometry",
-    description: "Improved EKF-based odometry at Alphadroid by integrating an RGB-D visual odometry pipeline. Tuned DWB and MPPI local planners and resolved IMU and camera data issues to improve navigation.",
+    organisation: "Alphadroid",
+    context: "Industry project · Navigation",
+    title: "Sensor fusion and visual odometry",
+    description: "Integrated RGB-D visual odometry with EKF-based odometry. Tuned DWB and MPPI local planners and resolved IMU and camera data issues for mobile robot navigation.",
     technologies: ["C++", "ROS2", "Nav2", "EKF", "RGB-D"],
   },
   {
-    category: "Mobile manipulation",
-    title: "Mobile Manipulation & Coordinated Control",
-    description: "Integrated a 5-DOF manipulator with a 2-DOF mobile base at IIT Gandhinagar. Implemented kinematics, dynamics, and coordinated control to position the end effector during a real-world pick-and-drop task.",
+    organisation: "IIT Gandhinagar",
+    context: "Research project · Mobile manipulation",
+    title: "Mobile manipulation and coordinated control",
+    description: "Integrated a 5-DOF manipulator with a 2-DOF mobile base. Implemented kinematics, dynamics, and coordinated control for end-effector positioning during a hardware pick-and-drop task.",
     technologies: ["ROS", "MoveIt", "Python", "Kinematics", "Gazebo"],
   },
   {
-    category: "Vision-guided manipulation",
-    title: "Vision-Guided Manipulation",
-    description: "Designed a 3-prismatic-joint manipulator at IIT Gandhinagar. Combined real-time image processing with position control to detect nuts and guide the manipulator through an unscrewing task.",
+    organisation: "IIT Gandhinagar",
+    context: "Research project · Vision and control",
+    title: "Vision-guided manipulation",
+    description: "Designed a 3-prismatic-joint manipulator for vision-guided nut removal. Combined real-time image processing with position control to detect nuts and execute the unscrewing task.",
     technologies: ["Python", "OpenCV", "ROS", "MATLAB"],
   },
 ];
@@ -70,30 +74,38 @@ const projects = [
 export function Project() {
   return (
     <Container id="project" aria-labelledby="projects-heading">
-      <header className="section-heading">
-        <p className="section-eyebrow">Engineering portfolio</p>
-        <h2 id="projects-heading">Selected projects</h2>
-        <p>Applied work in autonomous systems, robot control, and perception.</p>
+      <header className="projects-heading">
+        <div className="section-heading">
+          <p className="section-eyebrow">Engineering portfolio</p>
+          <h2 id="projects-heading">Selected projects</h2>
+          <p>Industry and research projects in control systems, autonomous navigation, and robotic manipulation.</p>
+        </div>
+        <a className="projects-profile" href="https://github.com/rishabkr29" target="_blank" rel="noreferrer">
+          <span>GitHub profile</span>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" aria-hidden="true">
+            <path d="M5 15 15 5M5 5h10v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </a>
       </header>
       <div className="projects">
-        {projects.map((project) => (
-          <ScrollAnimation animateIn="fadeInUp" key={project.title}>
-            <article className="project">
-              <header>
-                <p className="project-category">{project.category}</p>
-                <a href="https://github.com/rishabkr29" target="_blank" rel="noreferrer" aria-label="Visit Rishab’s GitHub profile">
-                  <img src={githubIcon} alt="" />
-                </a>
-              </header>
-              <h3>{project.title}</h3>
-              <p className="project-description">{project.description}</p>
-              <footer>
-                <ul className="tech-list" aria-label="Technologies used">
-                  {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
-                </ul>
-              </footer>
-            </article>
-          </ScrollAnimation>
+        {projects.map((project, index) => (
+          <article className="project" key={project.title} aria-labelledby={`project-title-${index}`}>
+            <header className="project-context">
+              <div>
+                <p className="project-organisation">{project.organisation}</p>
+                <p className="project-category">{project.context}</p>
+              </div>
+              <span className="project-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+            </header>
+            <h3 id={`project-title-${index}`}>{project.title}</h3>
+            <p className="project-description">{project.description}</p>
+            <footer>
+              <p className="project-tech-label">Technologies</p>
+              <ul className="tech-list" aria-label={`Technologies used for ${project.title}`}>
+                {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
+              </ul>
+            </footer>
+          </article>
         ))}
       </div>
       <div className="toolkit">
