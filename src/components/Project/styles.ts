@@ -14,8 +14,11 @@ export const Container = styled.section`
 
   .toolkit { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2.4rem 4rem; margin-top: 3.6rem; padding-top: 3rem; border-top: 1px solid var(--border); }
   .toolkit h3 { flex: 0 0 18rem; padding-top: 0.6rem; font-size: 1.8rem; }
-  .skills-list { display: flex; flex: 1 1 0; flex-wrap: wrap; gap: 0.8rem; min-width: 0; }
-  .skills-list li { padding: 0.6rem 1.2rem; border: 1px solid var(--border); border-radius: 0.6rem; color: var(--muted); background: var(--surface); font-size: 1.3rem; line-height: 1.6; }
+  .skills-list { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); flex: 1 1 0; gap: 1rem; min-width: 0; }
+  .skills-list li { display: flex; align-items: center; gap: 0.8rem; min-width: 0; padding: 0.8rem; border: 1px solid var(--border); border-radius: 0.7rem; color: var(--text); background: var(--surface); font-size: 1.3rem; font-weight: 500; line-height: 1.6; }
+  .skill-icon { display: grid; place-items: center; flex: 0 0 3rem; width: 3rem; height: 3rem; padding: 0.4rem; border: 1px solid #e7ece8; border-radius: 0.5rem; background: #fff; }
+  .skill-icon img { width: 2rem; height: 2rem; object-fit: contain; }
+  .skill-label { white-space: nowrap; }
 
   .project {
     display: flex;
@@ -41,6 +44,7 @@ export const Container = styled.section`
 
   @media (max-width: 1050px) {
     .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .skills-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   }
   @media (max-width: 650px) {
     margin-top: 6rem;
@@ -49,5 +53,6 @@ export const Container = styled.section`
     .project { padding: 2.4rem; }
     .toolkit { display: block; }
     .toolkit h3 { padding: 0; margin-bottom: 1.6rem; }
+    .skills-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 `;

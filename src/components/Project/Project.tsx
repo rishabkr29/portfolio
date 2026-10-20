@@ -1,8 +1,32 @@
 import { Container } from "./styles";
 import githubIcon from "../../assets/github.svg";
 import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
+import cplusplusIcon from "../../assets/skills/cplusplus.svg";
+import pythonIcon from "../../assets/skills/python.svg";
+import rosIcon from "../../assets/skills/ros.svg";
+import nav2Icon from "../../assets/skills/nav2.png";
+import moveitIcon from "../../assets/skills/moveit2.png";
+import mujocoIcon from "../../assets/skills/mujoco.png";
+import gazeboIcon from "../../assets/skills/gazebo.svg";
+import dockerIcon from "../../assets/skills/docker.svg";
+import linuxIcon from "../../assets/skills/linux.svg";
+import gitIcon from "../../assets/skills/git.svg";
+import matlabIcon from "../../assets/skills/matlab.svg";
 
-const skills = ["C++", "Python", "ROS1", "ROS2", "Nav2", "MoveIt2", "MuJoCo", "Gazebo", "Docker", "Linux", "Git", "MATLAB"];
+const skills = [
+  { name: "C++", icon: cplusplusIcon },
+  { name: "Python", icon: pythonIcon },
+  { name: "ROS1", icon: rosIcon },
+  { name: "ROS2", icon: rosIcon },
+  { name: "Nav2", icon: nav2Icon },
+  { name: "MoveIt2", icon: moveitIcon },
+  { name: "MuJoCo", icon: mujocoIcon },
+  { name: "Gazebo", icon: gazeboIcon },
+  { name: "Docker", icon: dockerIcon },
+  { name: "Linux", icon: linuxIcon },
+  { name: "Git", icon: gitIcon },
+  { name: "MATLAB", icon: matlabIcon },
+];
 
 const projects = [
   {
@@ -75,7 +99,14 @@ export function Project() {
       <div className="toolkit">
         <h3>Technical toolkit</h3>
         <ul className="skills-list" aria-label="Technical skills">
-          {skills.map((skill) => <li key={skill}>{skill}</li>)}
+          {skills.map((skill) => (
+            <li key={skill.name}>
+              <span className="skill-icon" aria-hidden="true">
+                <img src={skill.icon} alt="" width="20" height="20" loading="lazy" decoding="async" />
+              </span>
+              <span className="skill-label">{skill.name}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </Container>
