@@ -1,83 +1,110 @@
 import { Container } from "./styles";
 import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
+import fluxAuto from "../../assets/logos/flux-auto-icon.png";
+import alphadroid from "../../assets/logos/alphadroid-icon.png";
+import iitBombay from "../../assets/logos/iit-bombay.png";
+import iitGandhinagar from "../../assets/logos/iit-gandhinagar.png";
+import nitNagaland from "../../assets/logos/nit-nagaland.png";
 
-const skills = [
-  "C++", "Python", "ROS1", "ROS2", "Nav2", "MoveIt2",
-  "MuJoCo", "Gazebo", "Docker", "Linux", "Git", "MATLAB",
+type Organisation = {
+  name: string;
+  logo: string;
+  website: string;
+  designation: string;
+  detail: string;
+  period?: string;
+};
+
+const experience: Organisation[] = [
+  {
+    name: "Flux Auto",
+    logo: fluxAuto,
+    website: "https://fluxauto.ai/",
+    designation: "Robotics Software Engineer – Controls",
+    detail: "Bengaluru, India",
+  },
+  {
+    name: "Alphadroid",
+    logo: alphadroid,
+    website: "https://www.alphadroid.io/",
+    designation: "Robotics Engineer",
+    detail: "Noida, India",
+  },
+  {
+    name: "IIT Bombay",
+    logo: iitBombay,
+    website: "https://www.iitb.ac.in/",
+    designation: "Junior Research Fellow",
+    detail: "Suman Mashruwala Advanced Micro Engineering Lab",
+  },
 ];
+
+const education: Organisation[] = [
+  {
+    name: "IIT Gandhinagar",
+    logo: iitGandhinagar,
+    website: "https://iitgn.ac.in/",
+    designation: "M.Tech · Mechanical Engineering",
+    detail: "Indian Institute of Technology, Gandhinagar",
+    period: "July 2022 – June 2024",
+  },
+  {
+    name: "NIT Nagaland",
+    logo: nitNagaland,
+    website: "https://www.nitnagaland.ac.in/",
+    designation: "B.Tech · Mechanical Engineering",
+    detail: "National Institute of Technology, Nagaland",
+    period: "July 2018 – May 2022",
+  },
+];
+
+function OrganisationCard({ organisation }: { organisation: Organisation }) {
+  return (
+    <article className="organisation-card">
+      <a className="organisation-logo" href={organisation.website} target="_blank" rel="noreferrer" aria-label={`${organisation.name} website`}>
+        <img src={organisation.logo} alt={`${organisation.name} logo`} width="96" height="96" loading="lazy" decoding="async" />
+      </a>
+      <p className="organisation-name">{organisation.name}</p>
+      <h3 className="organisation-designation">{organisation.designation}</h3>
+      <p className="organisation-detail">{organisation.detail}</p>
+      {organisation.period && <p className="organisation-period">{organisation.period}</p>}
+    </article>
+  );
+}
 
 export function About() {
   return (
-    <Container id="about" aria-labelledby="about-heading">
-      <div className="about-intro">
-        <ScrollAnimation animateIn="fadeInUp">
-          <p className="section-eyebrow">01 / About me</p>
-          <h2 id="about-heading">From an idea in simulation to a robot in motion.</h2>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={100}>
-          <div className="about-story">
-            <p className="intro-lead">
-              I’m Rishab, a robotics engineer who enjoys making robots move
-              reliably and understand the world around them.
-            </p>
-            <p>
-              My work brings together control, perception, and motion planning.
-              I work with C++, Python, and ROS to take algorithms from MuJoCo
-              and Gazebo simulations to real hardware.
-            </p>
-            <p>
-              Along the way, I’ve worked on autonomous vehicles, mobile
-              manipulators, and assistive robots — each with a different
-              challenge in turning theory into something that works.
-            </p>
-          </div>
-        </ScrollAnimation>
+    <Container id="about" aria-labelledby="experience-heading">
+      <header className="section-heading">
+        <p className="section-eyebrow">Professional background</p>
+        <h2 id="experience-heading">Work experience</h2>
+        <p>Control, perception, and autonomy across industry and robotics research.</p>
+      </header>
+      <div className="organisation-grid experience-grid">
+        {experience.map((organisation) => (
+          <ScrollAnimation animateIn="fadeInUp" key={organisation.name}>
+            <OrganisationCard organisation={organisation} />
+          </ScrollAnimation>
+        ))}
       </div>
+    </Container>
+  );
+}
 
-      <div className="background-grid">
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className="background-group">
-            <h3>Where I’ve worked</h3>
-            <div className="background-entry">
-              <h4>Robotics Control System Engineer</h4>
-              <p>Flux Auto <span>· Bengaluru, India</span></p>
-            </div>
-            <div className="background-entry">
-              <h4>Robotics Engineer</h4>
-              <p>Alphadroid <span>· Noida, India</span></p>
-            </div>
-            <div className="background-entry">
-              <h4>Junior Research Fellow</h4>
-              <p>IIT Bombay</p>
-              <p className="entry-detail">Suman Mashruwala Advanced Micro Engineering Lab</p>
-            </div>
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={100}>
-          <div className="background-group">
-            <h3>Where I’ve learned</h3>
-            <div className="background-entry">
-              <h4>M.Tech in Mechanical Engineering</h4>
-              <p>Indian Institute of Technology, Gandhinagar</p>
-              <p className="entry-detail">July 2022 – June 2024</p>
-            </div>
-            <div className="background-entry">
-              <h4>B.Tech in Mechanical Engineering</h4>
-              <p>National Institute of Technology, Nagaland</p>
-              <p className="entry-detail">July 2018 – May 2022</p>
-            </div>
-          </div>
-        </ScrollAnimation>
+export function Education() {
+  return (
+    <Container id="education" aria-labelledby="education-heading">
+      <header className="section-heading">
+        <p className="section-eyebrow">Academic background</p>
+        <h2 id="education-heading">Education</h2>
+      </header>
+      <div className="organisation-grid education-grid">
+        {education.map((organisation) => (
+          <ScrollAnimation animateIn="fadeInUp" key={organisation.name}>
+            <OrganisationCard organisation={organisation} />
+          </ScrollAnimation>
+        ))}
       </div>
-
-      <ScrollAnimation animateIn="fadeInUp">
-        <div className="toolkit">
-          <h3>My everyday toolkit</h3>
-          <ul className="skills-list" aria-label="Technical skills">
-            {skills.map((skill) => <li key={skill}>{skill}</li>)}
-          </ul>
-        </div>
-      </ScrollAnimation>
     </Container>
   );
 }

@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     --green-soft: rgba(103, 221, 160, 0.08);
     --header-background: rgba(21, 25, 23, 0.92);
     --contact-icon-filter: invert(1);
-    --body-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --heading-font: 'Manrope', 'Inter', sans-serif;
+    --body-font: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --heading-font: 'Outfit', 'DM Sans', sans-serif;
     color-scheme: dark;
     scroll-padding-top: 10rem;
   }
@@ -51,13 +51,13 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, .logo {
     font-family: var(--heading-font);
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.25;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
 
-  h2 { font-size: clamp(3rem, 3.6vw, 4.4rem); }
+  h2 { font-size: clamp(3rem, 3.2vw, 4rem); }
   h3 { font-size: 2rem; }
   p { line-height: 1.8; }
   a { color: inherit; text-decoration: none; }

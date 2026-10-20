@@ -8,8 +8,8 @@ export function Contact() {
     <Container id="contact" aria-labelledby="contact-heading">
       <div className="contact-details">
         <header className="section-heading">
-          <p className="section-eyebrow">03 / Get in touch</p>
-          <h2 id="contact-heading">Let’s talk robotics.</h2>
+          <p className="section-eyebrow">Get in touch</p>
+          <h2 id="contact-heading">Contact</h2>
           <p>Have a project in mind, an interesting problem, or just want to exchange ideas? I’d love to hear from you.</p>
         </header>
         <div className="contacts">

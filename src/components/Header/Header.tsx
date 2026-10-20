@@ -19,7 +19,8 @@ export function Header() {
       <label htmlFor="switch" className="theme-switch"><span className="sr-only">Toggle light theme</span></label>
       <nav id="main-navigation" aria-label="Main navigation" className={isActive ? "active" : ""}>
         <NavHashLink smooth to="#home" onClick={closeMenu}>Home</NavHashLink>
-        <NavHashLink smooth to="#about" onClick={closeMenu}>About me</NavHashLink>
+        <NavHashLink smooth to="#about" onClick={closeMenu}>Experience</NavHashLink>
+        <NavHashLink smooth to="#education" onClick={closeMenu}>Education</NavHashLink>
         <NavHashLink smooth to="#project" onClick={closeMenu}>Projects</NavHashLink>
         <NavHashLink smooth to="#contact" onClick={closeMenu}>Contact</NavHashLink>
         <a href={`${import.meta.env.BASE_URL}Rishab_Kumar.pdf`} download className="button">Resume <span aria-hidden="true">↓</span></a>

@@ -12,6 +12,11 @@ export const Container = styled.section`
   }
   .projects > div { min-width: 0; }
 
+  .toolkit { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2.4rem 4rem; margin-top: 3.6rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+  .toolkit h3 { flex: 0 0 18rem; padding-top: 0.6rem; font-size: 1.8rem; }
+  .skills-list { display: flex; flex: 1 1 0; flex-wrap: wrap; gap: 0.8rem; min-width: 0; }
+  .skills-list li { padding: 0.6rem 1.2rem; border: 1px solid var(--border); border-radius: 0.6rem; color: var(--muted); background: var(--surface); font-size: 1.3rem; line-height: 1.6; }
+
   .project {
     display: flex;
     flex-direction: column;
@@ -28,7 +33,7 @@ export const Container = styled.section`
     header a { flex: 0 0 auto; padding: 0.2rem; }
     header img { width: 2.4rem; height: 2.4rem; }
     .project-category { max-width: 20rem; color: var(--green); font-size: 1.15rem; font-weight: 500; line-height: 1.7; }
-    h3 { margin-bottom: 1.6rem; font-size: 2rem; line-height: 1.45; letter-spacing: -0.035em; }
+    h3 { margin-bottom: 1.6rem; font-size: 2rem; font-weight: 500; line-height: 1.45; letter-spacing: -0.015em; }
     .project-description { margin-bottom: 2.8rem; color: var(--muted); font-size: 1.4rem; line-height: 1.85; }
     footer { margin-top: auto; padding-top: 1.8rem; border-top: 1px solid var(--border); }
     .tech-list { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.4rem; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
@@ -42,5 +47,7 @@ export const Container = styled.section`
     padding-top: 5.6rem;
     .projects { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
     .project { padding: 2.4rem; }
+    .toolkit { display: block; }
+    .toolkit h3 { padding: 0; margin-bottom: 1.6rem; }
   }
 `;

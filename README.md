@@ -1,6 +1,6 @@
 # Rishab Kumar Portfolio
 
-Personal portfolio website for Rishab Kumar, Robotics Engineer.
+Personal portfolio website for Rishab Kumar, Robotics Software Engineer – Controls.
 
 The site highlights my experience, projects, technical skills, resume, and contact details. It is built with React, TypeScript, Vite, and styled-components.
 
@@ -78,8 +78,10 @@ VITE_BASE_PATH=/portfolio/ npm run preview
 Open `http://127.0.0.1:4173/portfolio/`. Normal local development and root-domain
 deployments use `/` by default.
 
-The About section uses a narrative layout with experience, education, and
-skills, without requiring a profile photo. The contact form currently has hardcoded
+The page presents work experience with three company logos, followed by
+education with two institution logos, then projects and technical skills.
+Original logo sources are documented in `src/assets/logos/README.md`.
+The contact form currently has hardcoded
 Formspree and reCAPTCHA settings in `src/components/Form/Form.tsx`; replace
 them with settings from your own accounts and allow your GitHub Pages domain
 in reCAPTCHA. The email and phone links work independently of the form.

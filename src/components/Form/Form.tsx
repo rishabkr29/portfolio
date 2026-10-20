@@ -45,7 +45,7 @@ export function Form() {
   }
   return (
     <Container>
-      <h3>Leave a note</h3>
+      <h3>Send a message</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Your email</label>
         <input

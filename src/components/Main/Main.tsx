@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 import { Hero } from "../Hero/Hero";
-import { About } from "../About/About";
+import { About, Education } from "../About/About";
 import { Contact } from "../Contact/Contact";
 import { Project } from "../Project/Project";
 
@@ -9,6 +9,7 @@ export function Main() {
     <Container>
       <Hero />
       <About />
+      <Education />
       <Project />
       <Contact />
     </Container>

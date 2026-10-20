@@ -39,7 +39,7 @@ export const Container = styled.header`
 
   .menu { display: none; }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     gap: 1.6rem;
     padding-inline: 2.4rem;
     .menu { position: relative; z-index: 2; display: flex; flex: 0 0 3.6rem; min-height: 3.6rem; padding: 0.8rem; border: 0; border-radius: 0.4rem; background: transparent; color: var(--text); }
